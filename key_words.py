@@ -1,7 +1,10 @@
 import numpy as np
+import nltk
 from nltk.corpus import wordnet as wn
 import sys
 import re
+
+nltk.download('wordnet')
 
 bad_words = [' ', " ", "aboard", "about", "above", "according", "across", "addition", "after", "against", "ahead", "along",
 "alongside", "amid", "amidst", "among", "amongst", "around", "as", "aside", "astride", "at", "athwart",
@@ -15,7 +18,7 @@ bad_words = [' ', " ", "aboard", "about", "above", "according", "across", "addit
 "its", "him", "hers", "our", "yours", "theirs", "that", "this", "those", "these", "will", "must", "would", "might", 
 "should", "each", "only", "which", "what", "where", "when", "how", "why", "who", "never", "always", "get", "have", "had", "has", 
 "cannot", "aren", "isn", "weren", "were", "wasn", "was", "did", "doesn", "does", "can", "get", "gets", "got", "than", "already", "any",
-"much", "while", "here", "there", "not", "other", "too", "many"]
+"much", "while", "here", "there", "not", "other", "too", "many", "some", "all", "just", "even", "them"]
 
 delimiters = r'( |\;|\,|\.|\:|\s|\n|\(|\)|\[|\]|\{|\}|\"|\”|\“|\'|\’|\‘|\?|\!|\¿|\||\-)\s*'
 
